@@ -1,17 +1,39 @@
+:root {
+    --heading: #ffffff;
+    --text: #fff7e6;
+}
+html {
+    font-size: 16px; 
+}
+
 body {
     background-color: #0a192f;
     color: #ccd6f6;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
-h1, h3, h4, p {
-    color: #ccd6f6;
+.container{
+    margin: 2.5rem 0.8rem 2.5rem 0.8rem;
 }
 
-.container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1, h2, h3, h4 {
+    color: var(--heading);
+}
+
+nav > h1 {
+    font-size: 36px;
+    margin-bottom: 0.3rem;
+}
+
+nav h3 {
+    font-size: 18px;
+    margin-top: 0.1rem;
+    font-weight: 500;
+}
+p {
+    color: var(--text);
 }
 
 .icon i {
@@ -20,10 +42,7 @@ h1, h3, h4, p {
     margin: 0 0.5rem;
 }
 
-.heading {
-    cursor: pointer;
-}
-
+/* about */
 a.bold {
     font-weight: bold;
     color: #64ffda;
@@ -33,3 +52,71 @@ a.bold {
 a.bold:hover {
     text-decoration: underline;
 }
+/* card */
+.card1 {
+    display: flex;
+    flex-direction: column-reverse; 
+    flex-wrap: wrap;
+    width: 18rem;
+    box-sizing: border-box; 
+    overflow-wrap: break-word; 
+    
+  }
+.image1 {
+    position: relative;
+}
+.image1 img {
+    width: 12rem;
+    
+}
+.text {
+    line-height: 1.5;
+}
+.text h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 2px;
+}
+
+
+
+
+@media (min-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
+    }
+/* card */
+
+.card1 {
+    display: flex; display: flex;
+    margin: 5px;
+    border: 2px solid black;
+    width: 43rem;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.image1 {
+    position: relative;
+}
+.image1 img {
+    width: 12rem;
+}
+.text {
+    margin: 0 1rem 0 1rem;
+}
+.text h5 {
+    font-size: 1.1rem;
+}
+.text p {
+    font-size: 15px;
+}
+
+  }
