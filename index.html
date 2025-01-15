@@ -7,96 +7,142 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My Production Site</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Ali Anjum</h1>
-            <h3>Full Stack Engineer</h3>
-            <p class="content">
-                I build scalable web applications with dynamic interfaces and robust backends
-            </p>
-            <div class="social-icons">
-                <!-- <a href="" class="icon-link" target="_blank">
+    <div id="__next">
+        <div class="custom-background"></div>
+
+        <div class="container">
+
+            <header class="left-column">
+                <h1>Ali Anjum</h1>
+                <h3>Full Stack Engineer</h3>
+                <p class="content">
+                    I build scalable web applications with dynamic interfaces and robust
+                    backends
+                </p>
+                <nav class="menu">
+                    <ul>
+                      <li>
+                        <a href="#about" class="active"><span>ABOUT</span></a>
+                      </li>
+                      <li>
+                        <a href="#experiences"><span>EXPERIENCES</span></a>
+                      </li>
+                      <li>
+                        <a href="#projects"><span>PROJECTS</span></a>
+                      </li>
+                    </ul>
+                  </nav>
+                  
+
+
+                <div class="social-icons" aria-label="social-media">
+                    <!-- <a href="" class="icon-link" target="_blank">
 
                     <i class="fa-brands fa-instagram"></i>
                 </a> -->
-                <a href="" class="icon-link" target="_blank">
-
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/alianjum-web?tab=repositories" class="icon-link" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammadaliabbas7890@example.com"
-                    class="icon-link" target="_blank">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-            </div>
-        </header>
-
-        <div>
-            <article class="article">
-                <h4 class="sticky-heading">ABOUT</h4>
-                <section>
-                    <p>
-                        As a web developer, I have successfully worked on diverse projects
-                        that showcase my technical skills and creativity. One of my notable
-                        projects is &nbsp;
-                        <a href="https://littlelemon.com" class="bold" target="_blank">Little Lemon</a>
-                        , a modern restaurant website featuring a clean UI, responsive
-                        design, and user-friendly navigation. I also developed a &nbsp;
-                        <a href="https://spotify.com" class="bold" target="_blank">Spotify Clone</a>
-                        , where I implemented features like playlists, song playback, and
-                        dynamic content rendering. Additionally, I worked on the &nbsp;
-                        <a href="" class="bold" target="_blank">Gift Project</a>
-                        , a comprehensive web application incorporating frontend, backend,
-                        and microservices architecture.
-                    </p>
-                </section>
-            </article>
-
-            <article class="article">
-                <h4 class="sticky-heading">EXPERIENCES</h4>
-
-                <section>
-                    <p>I worked on many projects by the CodeWithHarry YouTube channel.</p>
-                </section>
-            </article>
-
-            <article class="article">
-                <h4 class="sticky-heading">PROJECTS</h4>
-                <div class="project-card">
-
-                    <section class="card">
-                        <div class="image">
-                            <img src="images/spotify.png" alt="spotify-image">
-                        </div>
-                        <div class="text">
-                            <a href="www.gothere.com" target="_blank">Build the Spotify Music App</a>
-                            <p>
-                                Users can listen to music change it,see the album of their favorite artist, save their
-                                favorite songs, adjust volume, and enjoy many more features such as login/sign up.
-                            </p>
-                        </div>
-
-                    </section>
+                    <a href="" class="icon-link" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/alianjum-web?tab=repositories" class="icon-link" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammadaliabbas7890@example.com"
+                        class="icon-link" target="_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
                 </div>
-            </article>
+            </header>
+            <main class="right-column">
+                <section id="about">
+                    <div>
+                        <h4 class="sticky-heading">ABOUT</h4>
+                    </div>
+
+                    <div>
+                        <p>
+
+                            As a web developer, I have successfully worked on a variety of projects that showcase my
+                            technical proficiency, problem-solving abilities, and creative flair. These projects span
+                            different domains, demonstrating my versatility in creating dynamic and user-centric web
+                            applications. One of my most notable projects is <a href="https://littlelemon.com"
+                                class="bold" target="_blank">Little Lemon</a>, a modern restaurant website designed with
+                            both aesthetics and functionality in mind. This project highlights my expertise in creating
+                            a clean user interface (UI) that is easy to navigate and intuitive for users. I implemented
+                            responsive design to ensure the site works seamlessly across all devices and screen sizes,
+                            while also focusing on optimizing page speed for better performance. The interactive
+                            elements and user-friendly navigation make it easy for users to browse the menu, view
+                            opening hours, and place online orders.
+                        </p>
+
+                        <p>
+                            Another key project I developed is a <a href="https://spotify.com" class="bold"
+                                target="_blank">Spotify Clone</a>, where I replicated many of the core features of
+                            Spotify, such as playlists, song playback, and dynamic content rendering. By working with
+                            technologies like JavaScript and React, I created a highly responsive, interactive platform
+                            that allows users to manage their playlists, stream songs, and explore new music based on
+                            their preferences. I also incorporated features like search functionality and track previews
+                            to mimic the user experience of Spotify, while integrating custom-made APIs to manage the
+                            song data and user accounts.
+                        </p>
+
+                        <p>
+                            In addition, I worked on the <a href="" class="bold" target="_blank">Gift Project</a>, a
+                            comprehensive web application designed to handle the entire process of buying, customizing,
+                            and sending gifts to others. The project involved building both the frontend and the
+                            backend, as well as setting up a microservices architecture to ensure scalability and
+                            flexibility in handling different services like user authentication, product
+                            recommendations, and payment processing. The backend was developed using Node.js and
+                            Express, while the frontend was powered by React and Redux for state management. The
+                            application allows users to browse gift categories, personalize products, and track
+                            deliveries, providing a smooth and secure experience from start to finish.
+                        </p>
+                    </div>
+                </section>
+
+
+                <section id="experiences">
+              
+                    <h4 class="sticky-heading">EXPERIENCES</h4>
+
+                        <p>
+                            I worked on many projects by the CodeWithHarry YouTube channel.
+                        </p>
+                    </section>
+
+                <section>
+                    <div id="projects">
+                        <h4 class="sticky-heading">PROJECTS</h4>
+                    </div>
+                    <div class="project-card">
+                        <div class="card">
+                            <div class="image">
+                                <img src="images/spotify.png" alt="spotify-image" />
+                            </div>
+                            <div class="text">
+                                <a href="www.gothere.com" target="_blank">Build the Spotify Music App</a>
+                                <p>
+                                    Users can listen to music, change it, see the album of their favorite artist, save their favorite songs, adjust volume, create playlists, explore trending tracks, follow artists, share music, discover new genres, and enjoy many more features such as login/sign up.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </section>
+            </main>
         </div>
-
-
     </div>
     <!-- Bootstrap JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->

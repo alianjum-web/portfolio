@@ -18,9 +18,33 @@ function createCard(img,pageLink, title, content) {
 }
 
 
-createCard("images/vanlife.png", "https://vanlife-prime.netlify.app/", "Vanlife App", "Rent the perfect van to make your perfect road trip.You pay for the van depending on the number of days.There are many vans available on the webpage.You can select your favorite one. ");
+createCard("images/vanlife.png", "https://vanlife-prime.netlify.app/", "Vanlife App", "Rent the perfect van to make your perfect road trip. You pay for the van depending on the number of days. There are many vans available on the webpage. You can select your favorite one, compare prices, check availability, view user reviews, and book instantly online.. ");
 
 createCard("images/giftlink.png", "https://gift-seven-smoky.vercel.app/", "GiftLink: A Smart Gift Idea", "Gave gifts to your loved ones.It uses sentiment analysis to suggest personalized gift ideas based on the recipient's details.  It showcases my full-stack development skills and ability to create practical, user-friendly applications.");
+
+
+
+// JavaScript for adding "active" class to menu items based on scroll position
+const sections = document.querySelectorAll('.content-section');
+const menuItems = document.querySelectorAll('.menu-item');
+
+const observerOptions = {
+  root: null, // Viewport
+  threshold: 0.5, // Trigger when 50% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const menuItem = document.querySelector(`a[href="#${entry.target.id}"]`);
+    if (entry.isIntersecting) {
+      menuItems.forEach((item) => item.classList.remove('active'));
+      menuItem.classList.add('active');
+    }
+  });
+}, observerOptions);
+
+sections.forEach((section) => observer.observe(section));
+
 
 /*
 

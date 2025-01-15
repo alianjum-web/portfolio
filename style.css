@@ -19,6 +19,21 @@ body {
   font-weight: 400;
   line-height: 1.5;
 }
+.custom-background {
+  pointer-events: none; /* Disable pointer events */
+  position: fixed; /* Fix the position relative to the viewport */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; /* Make it span the entire viewport */
+  z-index: 30; /* Set stack order */
+  transition: all 300ms; /* Add a transition effect */
+  background: radial-gradient(
+    600px at 1059px 307px,
+    rgba(29, 78, 216, 0.15),
+    transparent 80%
+  );
+}
 
 .container {
   margin: 2.5rem 0.8rem 2.5rem 0.8rem;
@@ -40,6 +55,17 @@ header h3 {
   font-size: 18px;
   margin-top: 0.1rem;
   font-weight: 500;
+}
+
+nav {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    display: none;
+    pointer-events: none;
+  }
 }
 
 .content {
@@ -139,7 +165,18 @@ section > p {
   margin-top: 2px;
 }
 
-@media (min-width: 636px) {
+@media (min-width: 638px) {
+  header > h1 {
+    font-size: 48px;
+    margin-bottom: 0.3rem;
+  }
+
+  header h3 {
+    font-size: 20px;
+    margin-top: 0.1rem;
+    font-weight: 500;
+  }
+
   .card {
     display: flex;
     flex-direction: row; /* Align image and text side by side */
@@ -151,13 +188,14 @@ section > p {
   .image {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .image img {
     width: 100%;
     max-width: 9rem;
     border-radius: 8px;
+    margin: 0.2rem 0 0 0;
   }
 
   .text {
@@ -195,12 +233,204 @@ section > p {
 }
 
 @media (min-width: 868px) {
+  .container {
+    margin: 3.5rem 3rem 3.5rem 3rem;
+  }
   .image img {
     width: 100%;
-    max-width: 13rem;
+    max-width: 12rem;
     border-radius: 8px;
   }
 }
+
 @media (min-width: 1024px) {
-    
+ 
+  .container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 0.4rem;
+    place-content: center;
+    margin: 2.5rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+  }
+  
+  header > h1 {
+    margin-bottom: 0rem;
+  }
+
+  header h3 {
+    margin-top: 0rem;
+    margin-bottom: 0.8rem;
+  }
+  .content {
+    margin-top: 0px;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+  }
+   li a{
+    text-decoration: none;
+   }
+  
+  .left-column {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+
+  /* General styles for the menu */
+/* General styles for the menu */
+.menu ul {
+list-style: none; /* Remove default bullet points */
+padding: 0;
+margin: 0;
 }
+
+.menu li {
+position: relative; /* For the pseudo-elements to be positioned relative to the li */
+margin: 1rem 0; /* Space between menu items */
+}
+
+.menu a {
+text-decoration: none; /* Remove underline */
+color: #e2e8f0; /* Text color */
+font-size: 1rem; /* Font size */
+display: inline-block; /* Allow pseudo-elements to align properly */
+position: relative; /* Enable positioning of pseudo-elements */
+padding-left: 1.5rem; /* Add space for the line to the left */
+transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Horizontal line to the left of each menu item */
+.menu a::before {
+content: ""; /* Empty content for the line */
+position: absolute; /* Position relative to the a tag */
+left: 0; /* Start at the very left of the a tag */
+top: 50%; /* Center vertically */
+transform: translateY(-50%); /* Adjust for proper centering */
+width: 1rem; /* Length of the line */
+height: 2px; /* Thickness of the line */
+background-color: #6b7280; /* Line color (gray) */
+transition: background-color 0.3s ease, width 0.5s ease; 
+}
+
+.menu a:hover::before,
+.menu a.active::before {
+background-color: #e2e8f0; /* Change the line color on hover or active state */
+width: 0rem; /* Increase the line length */
+}
+
+
+.menu a:hover,
+.menu a.active {
+color: #ffffff; /* Change text color for hover or active state */
+
+}
+
+/* span:hover::before {
+position: relative;
+left: 1rem;
+} */
+
+ 
+  main {
+    margin-top: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  div > h4 {
+    display: none;
+  }
+  .right-column {
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+
+  
+}
+
+
+@media (min-width: 1100px) and (max-width: 1150px) {
+  .container{
+    column-gap: 2rem;
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .container{
+    column-gap: 4rem;
+  }
+}
+@media (min-width: 1250px) and (max-width: 1440px) {
+  .container{
+    column-gap: 4.5rem;
+    
+  }
+}
+
+
+
+
+@media (min-width: 1281px) and (max-width: 1300px) {
+  #__next {
+    margin: 2.5rem 3rem;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1320px) {
+  #__next {
+    margin: 2.5rem 3.5rem;
+  }
+}
+@media (min-width: 1320px) and (max-width: 1340px) {
+  #__next {
+    margin: 2.5rem 4rem;
+  }
+}
+@media (min-width: 1340px) and (max-width: 1360px) {
+  #__next {
+    margin: 3rem 4.5rem;
+  }
+}
+@media (min-width: 1360px) and (max-width: 1380px) {
+  #__next {
+    margin: 3rem 5rem;
+  }
+}
+@media (min-width: 1380px) and (max-width: 1400px) {
+  #__next {
+    margin: 3rem 5.5rem;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1420px) {
+  #__next {
+    margin: 3rem 6rem;
+  }
+}
+@media (min-width: 1420px) and (max-width: 1439px) {
+  #__next {
+    margin: 3rem 6.5rem;
+  }
+}
+
+  @media (min-width: 1440px) {
+    #__next{
+      margin: 3rem 7rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      place-content: center;
+    }
+  
+  }
+  
