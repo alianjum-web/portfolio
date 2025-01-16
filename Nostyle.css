@@ -1,0 +1,49 @@
+
+  /* General styles for the menu */
+/* General styles for the menu */
+.menu ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    }
+    
+    .menu li {
+    position: relative; /* For the pseudo-elements to be positioned relative to the li */
+    margin: 1rem 0; /* Space between menu items */
+    }
+    
+    .menu a {
+    text-decoration: none; /* Remove underline */
+    color: #e2e8f0; /* Text color */
+    font-size: 1rem; /* Font size */
+    display: inline-block; /* Allow pseudo-elements to align properly */
+    position: relative; /* Enable positioning of pseudo-elements */
+    padding-left: 1.5rem; /* Add space for the line to the left */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    }
+    
+    /* Horizontal line to the left of each menu item */
+    .menu a::before {
+    content: ""; /* Empty content for the line */
+    position: absolute; /* Position relative to the a tag */
+    left: 0; /* Start at the very left of the a tag */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for proper centering */
+    width: 1rem; /* Length of the line */
+    height: 2px; /* Thickness of the line */
+    background-color: #6b7280; /* Line color (gray) */
+    transition: background-color 0.3s ease, width 0.5s ease; 
+    }
+    
+    .menu a:hover::before,
+    .menu a.active::before {
+    background-color: #e2e8f0; /* Change the line color on hover or active state */
+    width: 0rem; /* Increase the line length */
+    }
+    
+    
+    .menu a:hover,
+    .menu a.active {
+    color: #ffffff; /* Change text color for hover or active state */
+    
+    }

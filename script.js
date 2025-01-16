@@ -4,7 +4,7 @@ function createCard(img,pageLink, title, content) {
                     <div class="image">
                         <img src="${img}">
                     </div>
-                    <div class="text">
+                    <div class="project-text">
                          <a href="${pageLink}" target="_blank">${title}</a>
                         <p>
                            ${content}
